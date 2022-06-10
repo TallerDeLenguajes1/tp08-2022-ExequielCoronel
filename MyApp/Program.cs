@@ -43,7 +43,7 @@ namespace TPN8_Coronel_Francisco_Exequiel
            foreach(var item in Directory.GetFiles(PATH))
            {   
                aux=item.Replace(PATH+@"\","").Split('.');
-               archivoW.WriteLine($"{indice};{aux[0]};{aux[1]}");
+               archivoW.WriteLine($"{indice};{aux[0]};{aux[aux.Count()-1]}");
                indice++;
            }
            archivoW.Close();
